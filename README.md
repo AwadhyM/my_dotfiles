@@ -33,3 +33,20 @@ Configured behavior:
 - `Prefix H/L` moves between windows
 - Status bar is at the top
 - Theme is Dracula via TPM
+
+## Neovim
+
+The Neovim config lives at `nvim/`.
+
+Symlink the config:
+
+```sh
+ln -sfn ~/projects/dotfiles/nvim ~/.config/nvim
+```
+
+If replacing an existing config, move it aside first:
+
+```sh
+mv ~/.config/nvim ~/.config/nvim.backup
+ln -sfn ~/projects/dotfiles/nvim ~/.config/nvim
+```
