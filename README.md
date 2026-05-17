@@ -44,6 +44,35 @@ Symlink the config:
 ln -sfn ~/projects/dotfiles/nvim ~/.config/nvim
 ```
 
+## Bash
+
+The Bash config lives at `bash/` and is intended to work on Linux and macOS.
+
+Symlink the config:
+
+```sh
+ln -sfn ~/projects/dotfiles/bash/.bashrc ~/.bashrc
+ln -sfn ~/projects/dotfiles/bash/.bash_profile ~/.bash_profile
+ln -sfn ~/projects/dotfiles/bash/.bash_aliases ~/.bash_aliases
+ln -sfn ~/projects/dotfiles/bash/.inputrc ~/.inputrc
+```
+
+If replacing existing files, move them aside first:
+
+```sh
+mv ~/.bashrc ~/.bashrc.backup
+mv ~/.bash_profile ~/.bash_profile.backup
+mv ~/.bash_aliases ~/.bash_aliases.backup
+mv ~/.inputrc ~/.inputrc.backup
+```
+
+Configured behavior:
+
+- Aliases live in `bash/.bash_aliases`
+- Directory jumps include `dot`, `projects`, `cfg`, `nvimcfg`, `dl`, `docs`, `desk`, `..`, `...`
+- `ls` uses GNU `--color=auto` on Linux and BSD/macOS `-G` with `CLICOLOR`
+- `.inputrc` enables case-insensitive completion, prefix history search, visible completion markers, and tab cycling
+
 If replacing an existing config, move it aside first:
 
 ```sh

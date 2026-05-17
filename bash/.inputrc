@@ -1,0 +1,32 @@
+# Readline defaults for Bash.
+
+set editing-mode emacs
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set mark-symlinked-directories on
+set visible-stats on
+set colored-stats on
+set colored-completion-prefix on
+set menu-complete-display-prefix on
+set completion-map-case on
+
+# Keep completion tidy.
+set page-completions off
+set completion-query-items 200
+
+# History search uses the current prefix.
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+# Tab cycles completion candidates.
+"\t": menu-complete
+"\e[Z": menu-complete-backward
+
+# Useful word movement on common terminals.
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
