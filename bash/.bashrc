@@ -67,7 +67,7 @@ case "$TERM" in
 esac
 
 # User aliases and functions.
-DOTFILES_BASH_ALIASES="$HOME/.bash_aliases"
+DOTFILES_BASH_ALIASES="$HOME/.aliases"
 if [ ! -f "$DOTFILES_BASH_ALIASES" ] && [ -n "${BASH_SOURCE[0]:-}" ]; then
   DOTFILES_BASH_ALIASES="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)/.bash_aliases"
 fi
